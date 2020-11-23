@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="window.tivoli.ui.NewPurchaseOrderController">
+   <center>
+      <Pane prefHeight="526.0" prefWidth="676.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="6.0" layoutY="6.0" prefHeight="157.0" prefWidth="765.0" style="-fx-background-color: #ADD8E6;">
+               <children>
+                  <ComboBox fx:id="cmbCompanies" layoutX="99.0" layoutY="95.0" prefWidth="150.0" promptText="Select Company" />
+                  <TextField fx:id="txtPoNumber" layoutX="161.0" layoutY="26.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Label layoutX="79.0" layoutY="30.0" text="PO Number">
+                     <font>
+                        <Font name="Britannic Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDate" layoutX="424.0" layoutY="27.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Label layoutX="385.0" layoutY="31.0" text="Date">
+                     <font>
+                        <Font name="Britannic Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="6.0" layoutY="187.0" prefHeight="334.0" prefWidth="765.0" style="-fx-background-color: #ADD8E6;">
+               <children>
+                  <TableView fx:id="tblPO" layoutX="281.0" layoutY="34.0" prefHeight="247.0" prefWidth="452.0">
+                     <columns>
+                        <TableColumn fx:id="tblcItemCode" prefWidth="75.0" text="Item Code" />
+                        <TableColumn fx:id="tblcItemDesc" prefWidth="96.0" text="Item Desc" />
+                        <TableColumn fx:id="tblcQty" prefWidth="54.0" text="quantity" />
+                        <TableColumn fx:id="tblcPrice" prefWidth="75.0" text="Price" />
+                        <TableColumn fx:id="tblcTotWeight" prefWidth="75.0" text="Total Weight" />
+                        <TableColumn fx:id="tblcClear" prefWidth="75.0" text="Clear" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="txtItem" layoutX="24.0" layoutY="47.0" onKeyReleased="#txtItemSearchAction" prefHeight="25.0" prefWidth="200.0" />
+                  <ListView fx:id="lstItem" layoutX="24.0" layoutY="81.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="btnInsertIntoTable" layoutX="237.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnInsertIntoTableClickAction" style="-fx-background-color: #62bb93;" text="&gt;" textFill="#495751">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtTotalPrice" layoutX="262.0" layoutY="294.0" prefHeight="25.0" prefWidth="200.0" />
+                  <Label layoutX="157.0" layoutY="299.0" text="Total Price">
+                     <font>
+                        <Font name="Britannic Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnSave" contentDisplay="CENTER" defaultButton="true" layoutX="555.0" layoutY="288.0" mnemonicParsing="false" onAction="#btnSaveClickAction" opacity="0.9" prefHeight="39.0" prefWidth="105.0" style="-fx-background-color: #256250; -fx-background-radius: 30;" text="Save" textFill="#e8dfdf">
+                     <font>
+                        <Font name="Copperplate Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="window.tivoli.ui.OnProgressUIController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="357.0" prefWidth="722.0" style="-fx-background-color: #ADD8E6;">
+               <children>
+                  <TableView fx:id="tblOnProgress" layoutX="20.0" layoutY="55.0" prefHeight="247.0" prefWidth="686.0">
+                     <columns>
+                        <TableColumn fx:id="tblcCompany" prefWidth="75.0" text="Company" />
+                        <TableColumn fx:id="tblcDate" prefWidth="75.0" text="Date" />
+                        <TableColumn fx:id="tblcPONumber" prefWidth="87.0" text="PO Number" />
+                        <TableColumn fx:id="tblcItemCode" prefWidth="121.0" text="Item Code" />
+                        <TableColumn fx:id="tblcItemDesc" prefWidth="134.0" text="Item Desc" />
+                        <TableColumn fx:id="tblcQty" prefWidth="84.0" text="quantity" />
+                        <TableColumn fx:id="tblcStatus" prefWidth="109.0" text="Status" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="txtSearch" layoutX="427.0" layoutY="9.0" onKeyReleased="#txtSearchKeyAction" prefHeight="25.0" prefWidth="219.0" promptText="Search By PO Number" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

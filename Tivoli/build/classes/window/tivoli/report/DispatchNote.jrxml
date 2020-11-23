@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f4f72a1c-c9b3-498c-803b-2cdfad342f56">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="companyId" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT c.name, dn.itemDesc, dn.quantity, p.poNumber, i.itemCode
+FROM dispatchnote dn, company c, purchaseorder p, item i
+where c.id = dn.company_id and dn.item_id=i.id and dn.purchaseorder_id=p.id and c.id = $P{companyId}]]>
+	</queryString>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="itemDesc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="poNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="itemCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="2" width="100" height="20" uuid="32105c91-ceb6-4efe-be6d-5a28fd79ccba"/>
+				<text><![CDATA[itemCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="2" width="100" height="20" uuid="3cd6144a-5ad0-4dd9-bef1-95eefd5d45ce"/>
+				<text><![CDATA[itemDesc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="2" width="100" height="20" uuid="6154b05c-1cd7-41b4-a5f1-6bf3713f181d"/>
+				<text><![CDATA[poNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="2" width="100" height="20" uuid="2ffe49a5-c13d-4d68-9336-56d7a2c32c62"/>
+				<text><![CDATA[quantity]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="34" y="2" width="100" height="20" uuid="ccd31136-0e64-4c63-825f-893693ce1b15"/>
+				<textFieldExpression><![CDATA[$F{itemCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="4" width="100" height="20" uuid="20028e86-97b7-4877-abfb-85653c440246"/>
+				<textFieldExpression><![CDATA[$F{itemDesc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="4" width="100" height="20" uuid="41f80c18-2e61-47c8-99af-86f1510d6ea6"/>
+				<textFieldExpression><![CDATA[$F{poNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="4" width="100" height="20" uuid="d4dc2b89-0ada-46aa-a5f3-6786ff9fbf1e"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

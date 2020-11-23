@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="window.tivoli.ui.ManifactureManagementUIController">
+   <center>
+      <Pane prefHeight="358.0" prefWidth="801.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="364.0" prefWidth="846.0" style="-fx-background-color: #ADD8E6;">
+               <children>
+                  <TableView fx:id="tblPO" layoutX="5.0" layoutY="55.0" prefHeight="247.0" prefWidth="833.0">
+                     <columns>
+                        <TableColumn fx:id="tblcCompany" prefWidth="75.0" text="Company" />
+                        <TableColumn fx:id="tblcPONumber" prefWidth="75.0" text="PO Number" />
+                        <TableColumn fx:id="tblcItemCode" prefWidth="116.0" text="Item Code" />
+                        <TableColumn fx:id="tblcItemDesc" prefWidth="104.0" text="Item Desc" />
+                        <TableColumn fx:id="tblcQty" prefWidth="92.0" text="quantity" />
+                        <TableColumn fx:id="tblcManufactured" prefWidth="100.0" text="Manufactured" />
+                        <TableColumn fx:id="tblcToBeMan" prefWidth="75.0" text="To Be Manu" />
+                        <TableColumn fx:id="tblcIntoProcess" prefWidth="97.0" text="Into Process" />
+                        <TableColumn fx:id="tblcProceed" prefWidth="94.0" text="Proceed" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="txtSearch" layoutX="611.0" layoutY="12.0" onKeyReleased="#txtSearchKeyAction" prefHeight="25.0" prefWidth="219.0" promptText="Search By PO Number" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

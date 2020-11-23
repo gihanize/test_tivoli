@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="window.tivoli.ui.PurchaseOrderUpdateUIController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="148.0" layoutY="116.0" text="Item Code">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="111.0" layoutY="151.0" text="Item Description">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="159.0" layoutY="190.0" text="Quantity">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="179.0" layoutY="227.0" text="Price">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="168.0" layoutY="264.0" text="Weight">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="146.0" layoutY="304.0" text="Total Price">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtItemCode" editable="false" layoutX="296.0" layoutY="112.0" prefHeight="25.0" prefWidth="202.0" />
+            <TextField fx:id="txtItemDesc" editable="false" layoutX="296.0" layoutY="147.0" prefHeight="25.0" prefWidth="202.0" />
+            <TextField fx:id="txtQty" layoutX="296.0" layoutY="186.0" onKeyReleased="#onQtyChange" prefHeight="25.0" prefWidth="202.0" />
+            <TextField fx:id="txtPrice" editable="false" layoutX="296.0" layoutY="223.0" prefHeight="25.0" prefWidth="202.0" />
+            <TextField fx:id="txtWeight" editable="false" layoutX="296.0" layoutY="260.0" prefHeight="25.0" prefWidth="202.0" />
+            <TextField fx:id="txtTotalPrice" editable="false" layoutX="296.0" layoutY="300.0" prefHeight="25.0" prefWidth="202.0" />
+            <Label layoutX="141.0" layoutY="81.0" text="PO Number">
+               <font>
+                  <Font name="Britannic Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPONumber" editable="false" layoutX="297.0" layoutY="77.0" prefHeight="25.0" prefWidth="202.0" />
+            <Button fx:id="btnUpdate" contentDisplay="CENTER" defaultButton="true" layoutX="269.0" layoutY="385.0" mnemonicParsing="false" onAction="#btnUpdateClickAction" opacity="0.9" prefHeight="39.0" prefWidth="105.0" style="-fx-background-color: #256250; -fx-background-radius: 30;" text="Update" textFill="#e8dfdf">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
